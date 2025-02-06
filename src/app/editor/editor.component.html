@@ -1,0 +1,53 @@
+<div class="editor-container">
+  <header class="header">
+    <h2>Editor de Letras com Cifras</h2>
+  </header>
+
+  <!-- Painel de controles -->
+  <section class="controls-panel">
+    <div class="control-group">
+      <label for="semitones">Transpor (semitons):</label>
+      <input
+        type="number"
+        id="semitones"
+        [(ngModel)]="semitones"
+        (change)="transpose()"
+        min="0"
+      />
+    </div>
+    <div class="control-group">
+      <label for="capo">Capotraste (ex.: 3):</label>
+      <input
+        type="number"
+        id="capo"
+        [(ngModel)]="capo"
+        (change)="transpose()"
+        min="0"
+      />
+    </div>
+    <div class="control-group">
+      <label for="fontSizeSelect">Tamanho da Fonte:</label>
+      <select id="fontSizeSelect" [(ngModel)]="fontSize">
+        <option value="12px">Pequeno</option>
+        <option value="16px" selected>Normal</option>
+        <option value="20px">Grande</option>
+        <option value="24px">Extra Grande</option>
+      </select>
+    </div>
+    <div class="control-group download-group">
+      <button (click)="downloadPdf()">Download PDF</button>
+    </div>
+  </section>
+
+  <!-- Editor -->
+  <section class="editor-wrapper">
+    <div
+      #editorDiv
+      class="editor"
+      [ngStyle]="{ 'font-size': fontSize }"
+      contenteditable="true"
+      [innerHTML]="editorSafeHtml"
+      (blur)="updateOriginalText()"
+    ></div>
+  </section>
+</div>

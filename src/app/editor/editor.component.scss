@@ -1,0 +1,91 @@
+/* Container geral */
+.editor-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Cabeçalho */
+.header h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Painel de controles */
+.controls-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+
+.control-group {
+  flex: 1 1 45%;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.control-group label {
+  margin-right: 8px;
+  font-weight: bold;
+  color: #555;
+  white-space: nowrap;
+}
+
+.control-group input[type="number"],
+.control-group select {
+  padding: 5px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+}
+
+/* Botão de download */
+.download-group {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.download-group button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.download-group button:hover {
+  background-color: #45a049;
+}
+
+/* Área do editor */
+.editor-wrapper {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  padding: 15px;
+}
+
+.editor {
+  min-height: 200px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  outline: none;
+  /* Se desejar, adicione um background leve ao editor */
+  background: #fcfcfc;
+}
